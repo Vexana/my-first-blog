@@ -13,8 +13,8 @@
        <div>
         <p>This is so step by step <p>
         <p>This Django thing is very tiring but addicting. I hate it.</p>
-          <em>Django is</em>
-          <strong>tiring</strong>
+          <strong>Django is</strong>
+          <em >tiring</em>
     <p> Here is a link to my website. Check it out! <a href="https://vexana.github.io/portfolio/aboutme.html" target="_blank">My Profile</a> <p>
      <div>
        <p> Here's a list of what I'd like to do for my free time!
@@ -27,6 +27,17 @@
       <p> Lastly,<p>
         <ul><li> <strong>SLEEP</strong> </li></ul>
      </div>
+    <div>
+       <h1><a href="/">Django Girls Blog</a></h1>
+   </div>
+
+   {% for post in posts %}
+       <div>
+           <p>published: {{ post.published_date }}</p>
+           <h1><a href="">{{ post.title }}</a></h1>
+           <p>{{ post.text|linebreaksbr }}</p>
+       </div>
+   {% endfor %}
    </div>
 
 </html>

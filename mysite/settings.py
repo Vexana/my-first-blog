@@ -25,7 +25,7 @@ SECRET_KEY = '=0eh3)op+6138ih=)l2&s))c+gj#@k2fp2@&o%sc8)ozma=)-2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '<Vexana>.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'vexana.pythonanywhere.com',]
 
 
 # Application definition

@@ -1,6 +1,4 @@
-{% extends 'blog/base.html' %}
 {% load staticfiles %}
-
 <html>
   <head>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -12,7 +10,7 @@
   <body>
     <body>
           <div class="page-header">
-              <h1><a href="/">Django Girls Blog</a></h1>
+              <h1><a href="/">Lyca's Blog</a></h1>
           </div>
 
           <div class="content container">
@@ -25,8 +23,6 @@
 
         <h2>I am so tired</h2>
           <h3>I wanna go home and sleep.</h3>
-
-           <h1><a href="https://vexana.github.io/portfolio/aboutme.html" target="_blank">Lyca's Blog</a></h1>
        </div>
        <div>
         <p>This is so step by step <p>
@@ -45,16 +41,17 @@
       <p> Lastly,<p>
         <ul><li> <strong>SLEEP</strong> </li></ul>
      </div>
-   {% block content %}
-     {% for post in posts %}
-         <div class="post">
-             <div class="date">
-                 {{ post.published_date }}
-             </div>
-             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-             <p>{{ post.text|linebreaksbr }}</p>
-         </div>
-     {% endfor %}
-   {% endblock %}
 
-</body></html>
+
+   <div class="page-header">
+       <h1><a href="/">Django Girls Blog</a></h1>
+   </div>
+   <div class="content container">
+       <div class="row">
+           <div class="col-md-8">
+           {% block content %}
+           {% endblock %}
+           </div>
+       </div>
+   </div>
+</html>
